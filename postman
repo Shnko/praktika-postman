@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "3f8986da-9dca-4f55-b9fd-85fdc52a8384",
+		"name": "app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27853699"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "create account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{service}}/account?name=user1&secret=password",
+							"host": [
+								"{{service}}"
+							],
+							"path": [
+								"account"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "user1"
+								},
+								{
+									"key": "secret",
+									"value": "password"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "session",
+			"item": [
+				{
+					"name": "create token",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://shnko.pythonanywhere.com/session?name=user1&secret=password",
+							"protocol": "http",
+							"host": [
+								"shnko",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"session"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "user1"
+								},
+								{
+									"key": "secret",
+									"value": "password"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete token",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://shnko.pythonanywhere.com/session?token=1 z l y o k 2 7 2 l",
+							"protocol": "http",
+							"host": [
+								"shnko",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"session"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "1 z l y o k 2 7 2 l"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notes",
+			"item": [
+				{
+					"name": "get list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://shnko.pythonanywhere.com/note?token=r r 3 2 l 9 m 7 n 2",
+							"protocol": "http",
+							"host": [
+								"shnko",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"note"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "r r 3 2 l 9 m 7 n 2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create note",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://shnko.pythonanywhere.com/note?title=title&content=content&token=r r 3 2 l 9 m 7 n 2",
+							"protocol": "http",
+							"host": [
+								"shnko",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"note"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "title"
+								},
+								{
+									"key": "content",
+									"value": "content"
+								},
+								{
+									"key": "token",
+									"value": "r r 3 2 l 9 m 7 n 2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get note",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://shnko.pythonanywhere.com/note?token=r r 3 2 l 9 m 7 n 2&id=1",
+							"protocol": "http",
+							"host": [
+								"shnko",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"note"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "r r 3 2 l 9 m 7 n 2"
+								},
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://shnko.pythonanywhere.com/note?id=2&token=r r 3 2 l 9 m 7 n 2&title=title&content=Newcontent",
+							"protocol": "http",
+							"host": [
+								"shnko",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"note"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								},
+								{
+									"key": "token",
+									"value": "r r 3 2 l 9 m 7 n 2"
+								},
+								{
+									"key": "title",
+									"value": "title"
+								},
+								{
+									"key": "content",
+									"value": "Newcontent"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete note",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://shnko.pythonanywhere.com/note?token=r r 3 2 l 9 m 7 n 2&id=2",
+							"protocol": "http",
+							"host": [
+								"shnko",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"note"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "r r 3 2 l 9 m 7 n 2"
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "service",
+			"value": "http://shnko.pythonanywhere.com/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
